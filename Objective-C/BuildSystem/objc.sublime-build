@@ -1,0 +1,11 @@
+{
+  "cmd": ["bash", "-c", "clang -lobjc -framework Cocoa -framework Carbon -o /tmp/sublime-objc-output $file"],
+  "file_regex": "^(.*?):([0-9]+):([0-9]+): (.*)",
+  "selector": "source.objc",
+  "variants": [
+    {
+      "name": "Run",
+      "cmd": ["bash", "-c", "clang -lobjc -framework Cocoa -framework Carbon -o /tmp/sublime-objc-output $file && /tmp/sublime-objc-output"]
+    }
+  ]
+}

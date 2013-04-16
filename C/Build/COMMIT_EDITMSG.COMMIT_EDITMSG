@@ -1,0 +1,116 @@
+init
+
+# init
+# --------------
+# Please enter the commit message for your changes. Everything below
+# this paragraph is ignored, and an empty message aborts the commit.
+# Just close the window to accept your message.
+diff --git a/.DS_Store b/.DS_Store
+new file mode 100644
+index 0000000..5008ddf
+Binary files /dev/null and b/.DS_Store differ
+diff --git a/C/Build/c.sublime-build b/C/Build/c.sublime-build
+new file mode 100644
+index 0000000..c1ea357
+--- /dev/null
++++ b/C/Build/c.sublime-build
+@@ -0,0 +1,5 @@
++{  
++    "cmd": ["make && ./a.out"],  
++    "path": "/usr/bin:/usr/local/bin:...",  
++    "shell": true  
++}  
+\ No newline at end of file
+diff --git a/Default (Linux).sublime-keymap b/Default (Linux).sublime-keymap
+new file mode 100644
+index 0000000..0d4f101
+--- /dev/null
++++ b/Default (Linux).sublime-keymap	
+@@ -0,0 +1,2 @@
++[
++]
+diff --git a/Default (OSX).sublime-keymap b/Default (OSX).sublime-keymap
+new file mode 100644
+index 0000000..0d4f101
+--- /dev/null
++++ b/Default (OSX).sublime-keymap	
+@@ -0,0 +1,2 @@
++[
++]
+diff --git a/Default (Windows).sublime-keymap b/Default (Windows).sublime-keymap
+new file mode 100644
+index 0000000..0d4f101
+--- /dev/null
++++ b/Default (Windows).sublime-keymap	
+@@ -0,0 +1,2 @@
++[
++]
+diff --git a/Objective-C/BuildSystem/objc.sublime-build b/Objective-C/BuildSystem/objc.sublime-build
+new file mode 100644
+index 0000000..ff7d699
+--- /dev/null
++++ b/Objective-C/BuildSystem/objc.sublime-build
+@@ -0,0 +1,11 @@
++{
++  "cmd": ["bash", "-c", "clang -lobjc -framework Cocoa -framework Carbon -o /tmp/sublime-objc-output $file"],
++  "file_regex": "^(.*?):([0-9]+):([0-9]+): (.*)",
++  "selector": "source.objc",
++  "variants": [
++    {
++      "name": "Run",
++      "cmd": ["bash", "-c", "clang -lobjc -framework Cocoa -framework Carbon -o /tmp/sublime-objc-output $file && /tmp/sublime-objc-output"]
++    }
++  ]
++}
+\ No newline at end of file
+diff --git a/Objective-C/test_method.sublime-snippet b/Objective-C/test_method.sublime-snippet
+new file mode 100644
+index 0000000..bc1e0f7
+--- /dev/null
++++ b/Objective-C/test_method.sublime-snippet
+@@ -0,0 +1,11 @@
++<snippet>
++	<content><![CDATA[
+++ test_${1:MethodName}_${2:Scenario}_${3:ExpectedResult} {
++
++}
++]]></content>
++	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
++	<tabTrigger>ttt</tabTrigger>
++	<!-- Optional: Set a scope to limit where the snippet will trigger -->
++	<!-- <scope>source.python</scope> -->
++</snippet>
+diff --git a/Package Control.last-run b/Package Control.last-run
+new file mode 100644
+index 0000000..1e4a943
+--- /dev/null
++++ b/Package Control.last-run	
+@@ -0,0 +1 @@
++1365320597
+\ No newline at end of file
+diff --git a/Package Control.sublime-settings b/Package Control.sublime-settings
+new file mode 100644
+index 0000000..4c53715
+--- /dev/null
++++ b/Package Control.sublime-settings	
+@@ -0,0 +1,7 @@
++{
++	"installed_packages":
++	[
++		"CFeather",
++		"Git"
++	]
++}
+diff --git a/Preferences.sublime-settings b/Preferences.sublime-settings
+new file mode 100644
+index 0000000..b91930e
+--- /dev/null
++++ b/Preferences.sublime-settings
+@@ -0,0 +1,7 @@
++{
++	"font_size": 12.0,
++	"ignored_packages":
++	[
++		""
++	]
++}
