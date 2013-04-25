@@ -2,6 +2,8 @@
 	"installed_packages":
 	[
 		"CFeather",
-		"Git"
+		"Git",
+		"Package Control",
+		"Print to HTML"
 	]
 }
